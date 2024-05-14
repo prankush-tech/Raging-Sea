@@ -26,8 +26,8 @@ export default class threeJS {
 		this.container.appendChild(this.stats.dom);
 
 		this.debugObject ={
-			depthColor: '#4e1891',
-			surfaceColor :'#9bd8ff'
+			depthColor: '#a30000',
+			surfaceColor :'#ffe770'
 		}
 
 		this.params = {
@@ -97,16 +97,16 @@ export default class threeJS {
 		this.material = new THREE.ShaderMaterial({
 			uniforms:{
 				uTime:{value:0},
-				uBigWavesSpeed:{value:0.1},
+				uBigWavesSpeed:{value:0.124},
 
 				uResolution:{value:0},
-				uBigWavesElevation: {value: 0.2},
+				uBigWavesElevation: {value: 0.13},
 				uBigWavesFrequency: {value: new THREE.Vector2(4,1.5)},
 
 				uDepthColor :{value : new THREE.Color (this.debugObject.depthColor)},
 				uSurfaceColor :{value : new THREE.Color (this.debugObject.surfaceColor)},
-				uColorMultiplier:{value: 5},
-				uColorOffset:{value:0.7},
+				uColorMultiplier:{value: 8.59},
+				uColorOffset:{value:0.9},
 				uTexture:{value: new THREE.TextureLoader().load(AbstractImage)}
 			},
 			// wireframe:true,
